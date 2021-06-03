@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "- [Description](#description)\r - [User Story](#user-story)\r - [Acceptance Criteria](#acceptance-criteria)\r - [Submission Requirements](#submission-requirements)\r ## Description",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glendonintendo/social-network-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glendonintendo/social-network-api/issues"
+  },
+  "homepage": "https://github.com/glendonintendo/social-network-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  }
+}
