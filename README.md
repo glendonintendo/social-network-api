@@ -4,6 +4,7 @@
 - [Acceptance Criteria](#acceptance-criteria)
 - [Submission Requirements](#submission-requirements)
 ## Description
+The social network api is a complete RESTful API using MondoDB with the Mongoose framework. With the api, users can perform all the relevant CRUD API calls for the Users and Thought models.
 
 ## User Story
 ```
