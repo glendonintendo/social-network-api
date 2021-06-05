@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
     getAllUsers(req, res) {
@@ -37,7 +37,7 @@ const userController = {
     },
 
     updateUser({ params, body }, res) {
-        Pizza.findOneAndUpdate(
+        User.findOneAndUpdate(
             {
                 _id: params.id
             },
@@ -68,7 +68,11 @@ const userController = {
                     res.status(404).json({ message: 'No user found with this id' });
                     return;
                 }
-                res.json(dbUserData);
+
+                return Thought.deleteMany({ _id: { $in: dbUserData.thoughts } } );
+            })
+            .then(dbThoughtData => {
+                res.json({ message: 'User and associated thoughts deleted' });
             })
             .catch(err => {
                 console.log(err);
